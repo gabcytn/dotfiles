@@ -1,0 +1,5 @@
+return {
+  {
+    'tjdevries/php.nvim',
+  },
+}

@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -8,9 +8,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="awesomepanda"
-ZSH_THEME="intheloop"
+ZSH_THEME="awesomepanda"
 # ZSH_THEME="agnoster"
+# ZSH_THEME="intheloop"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,6 +105,31 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias bat="batcat"
+prompt_context(){}
 
-export PATH=$PATH:$HOME/.local/bin:$HOME/.nvm/versions/node/v24.16.0/bin
+alias turnoff="shutdown now"
+alias tmks="tmux kill-server"
+alias asdf="clear"
+alias x="exit"
+alias ytdl="/usr/bin/python3 /usr/local/bin/youtube-dl"
+alias cd..="cd ../"
+alias cd...="cd ../../"
+alias cd....="cd ../../../"
+
+export PATH="$PATH:/home/gabcytyn/.nvm/versions/node/v22.15.0/bin/"
+export PATH="/home/gabcytyn/.config/herd-lite/bin/:$PATH"
+alias scrcpy='/home/gabcytyn/Downloads/scrcpy-linux-x86_64-v3.3.3/scrcpy'
+alias bat="batcat"
+alias eza="eza --icons"
+
+export PATH=$PATH:/usr/local/go/bin
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+
+PATH=$HOME/.cask/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source ~/.zshenv
