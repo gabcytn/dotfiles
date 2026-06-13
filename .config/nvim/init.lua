@@ -112,6 +112,9 @@ do
   --  Experiment for yourself to see if you like it!
   vim.o.relativenumber = true
 
+  --No line wrap for lines longer than the screen width
+  vim.o.wrap = false
+
   -- Enable mouse mode, can be useful for resizing splits for example!
   vim.o.mouse = 'a'
 
@@ -695,9 +698,10 @@ do
     --    https://github.com/pmizio/typescript-tools.nvim
     --
     -- But for many setups, the LSP (`ts_ls`) will work just fine
-    -- ts_ls = {},
+    ts_ls = {},
 
     stylua = {}, -- Used to format Lua code
+    vue_ls = {},
 
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
