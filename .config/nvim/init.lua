@@ -698,10 +698,9 @@ do
     --    https://github.com/pmizio/typescript-tools.nvim
     --
     -- But for many setups, the LSP (`ts_ls`) will work just fine
-    ts_ls = {},
+    -- ts_ls = {},
 
     stylua = {}, -- Used to format Lua code
-    vue_ls = {},
 
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
@@ -984,8 +983,8 @@ end
 do
   vim.keymap.set('n', '<leader>|', '<cmd>vsplit<CR>')
   vim.keymap.set('n', '<leader>-', '<cmd>split<CR>')
-  vim.cmd("hi! Normal guibg=None ctermbg=None")
-  vim.cmd("hi! NonText guibg=None ctermbg=None")
+  vim.cmd 'hi! Normal guibg=None ctermbg=None'
+  vim.cmd 'hi! NonText guibg=None ctermbg=None'
 end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
