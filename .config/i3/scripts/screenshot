@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+# Use the current timestamp as the unique filename of the screenshot.
+FILE_PATH="/home/$USER/Pictures/Screenshots/screenshot-$(date -u +'%Y%m%d-%H%M%SZ').png"
+
+main() {
+# maim --format=png | tee "$FILE_PATH" | xclip -selection clipboard -t image/png
+    case $1 in
+        full) maim --format=png | tee "$FILE_PATH" | xclip -selection clipboard -t image/png ;;
+        select) maim --select --format=png | tee "$FILE_PATH" | xclip -selection clipboard -t image/png ;;
+        window) maim --window $(xdotool getactivewindow) --format=png | tee "$FILE_PATH" | xclip -selection clipboard -t image/png ;;
+    esac
+    paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+}
+
+main "$@"
